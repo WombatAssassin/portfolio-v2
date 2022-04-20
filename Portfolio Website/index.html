@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="The best portfolio site in 2022. JS best practices, how to write great copy, best portfolio designs, all here at devconnor!" />
+
+    <title>Connor's mindblowing frontend dev portfolio website</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;700;900&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ec3ffb5ff5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-bar__logo">
+            <a href="#home">&lt;devconnor&gt;</a>
+        </div>
+
+        <div class="nav-bar__links">
+            <a class="nav-bar__link" id="toggle-theme-btn"><i class="fa-solid fa-sun" id="toggle-theme-icon"></i></a>
+            <a href="#home" class="nav-bar__home nav-bar__link">Home</a>
+            <a href="#about-me" class="nav-bar__about nav-bar__link">About</a>
+            <a href="#projects" class="nav-bar__work nav-bar__link">My Work</a>
+            <a href="#contact-me" class="nav-bar__contact nav-bar__link">Contact</a>
+        </div>
+        <div id="nav-icon1" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content animated zoomIn">
+                <div class="modal-body nav">
+                    <ul>
+                        <li><a href="#home" onclick="closeModal()">Home</a></li>
+                        <li><a href="#about-me" onclick="closeModal()">About</a></li>
+                        <li><a href="#projects" onclick="closeModal()">My Work</a></li>
+                        <li><a href="#contact-me" onclick="closeModal()">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Body -->
+    <section class="intro" id="home">
+        <h1>
+            Howdy<span class="first-accent">,</span> I<span class="second-accent">'</span>m
+            <span class="intro__name"><span class="bold">Connor Fadden</span><span class="first-accent">!</span></span>
+        </h1>
+        <p class="intro__sub-title">front-end dev</p>
+    </section>
+    <!-- Arrow Down -->
+    <a href="#about-me" class="intro__down-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+    <!-- About Me -->
+    <section class="about-me" id="about-me">
+        <h2 class="about-me-header">
+            <div class="circle-div">
+                <svg class="circle-svg" viewBox="0 0 80 80" width="100" height="100">
+                    <circle class="about-circle" cx="40" cy="40" r="38" />
+                </svg>
+            </div>
+            About Me
+        </h2>
+        <p class="arrow-text">Click us! (or don't, I'm not your mother..)</p>
+        <div class="arrow-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" class="giant-arrow">
+                <defs>
+                    <style>
+                        path,
+                        polyline {
+                            fill: none;
+                            stroke: var(--custom-arrow-color);
+                            vector-effect: non-scaling-stroke;
+                            stroke-width: 1;
+                        }
+
+                        path {
+                            stroke-dasharray: 11, 5;
+                        }
+                    </style>
+                    <marker id="pointer" markerWidth="10" markerHeight="8" refX="9.5" refY="5.1" orient="-45"
+                        markerUnits="userSpaceOnUse">
+                        <polyline points="1 1, 9 5, 1 7" />
+                    </marker>
+                </defs>
+                <path
+                    d="M16.7,178 c87.6-46.9,162.9-185.4,227-136.4C307.2,90.1,195,158.5,111,108.9C71,85.2,92.2,30.7,126,7"
+                    marker-end="url(#pointer)" />
+            </svg>
+        </div>
+        <!-- About Me Grid -->
+        <div class="about-me__grid">
+            <div class="about-me__grid__content" id="about-me-grid-content">
+                <div class="about-me__content__text" id="about-me__content__code">
+                    <h3>I am a coder.</h3>
+                    <p>
+                        I'm a junior developer, with a background in copywriting, based in London, UK.</p>
+                    <p>
+                        My road to becoming a junior dev started last year, after discovering an itching curiosity for
+                        all things
+                        coding. I've had a fantastic time learning, and it's only strengthened my desire to start my
+                        career in the industry.
+                    </p>
+                    <p>Languages, libraries and frameworks I've worked with: HTML, CSS, Javascript, Typescript, React,
+                        Tailwind CSS </p>
+                    <p></p>
+                </div>
+                <div class="about-me__content__text text-selected" id="about-me__content__ghost">
+                    <h3>My personal philosophy.</h3>
+                    <p>
+                        At my core, I'm a creative. I detest cookie-cutter designs and cookie-cutter
+                        personalities/people.</p>
+                    <p>I believe life is fueled by every-day interactions, and that making
+                        someone smile, laugh or pause in awe is one of the most rewarding and noble ways one can spend
+                        their time.
+                    </p>
+                    <p>UI/UX should be fit for purpose, and leave on people a lasting impression.</p>
+                    <p>My hobbies: coding, writing, playing ukulele, gym.</p>
+                </div>
+                <div class="about-me__content__text" id="about-me__content__feather">
+                    <h3>I am a writer.</h3>
+                    <p>
+                        I believe that humour and creativity is at the core of every human being. Whether we have these
+                        things ourselves or not, we all strive for them in the products and people we interact with.
+                    </p>
+                    <p>
+                        Much like my personality, I prefer creative, quirky, fun, unique and humourous designs, copy and
+                        content to the predictable, the dull, the flat.</p>
+                    <p>If my work isn't at least noteworthy to whoever views it, I'm doing something wrong.</p>
+                </div>
+            </div>
+            <div class="about-me__grid__icons">
+                <a class="about-me__btn wiggle" id="code-icon-button"><i
+                        class="fa-solid fa-code about-me__grid__icon"></i></a>
+                <a class="about-me__btn wiggle" id="ghost-icon-button"><i
+                        class="fa-solid fa-ghost about-me__grid__icon selected"></i></a>
+                <a class="about-me__btn wiggle" id="feather-icon-button"><i
+                        class="fa-solid fa-feather-pointed about-me__grid__icon"></i></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section class="projects" id="projects">
+
+        <h2 class="projects-header">
+            <div class="circle-div">
+                <svg class="circle-svg" viewBox="0 0 80 80" width="100" height="100">
+                    <circle class="project-circle" cx="40" cy="40" r="38" />
+                </svg>
+            </div>My Projects
+        </h2>
+        <div class="projects__grid">
+            <div class="project project1">
+                <h3>This very website!</h3>
+                <img class="projects__img" src="img/project-image-01.jpg" />
+                <p><span class="toolbox-item">HTML</span>
+                    <span class="toolbox-item">CSS</span>
+                    <span class="toolbox-item">Javascript</span>
+                </p>
+                <h4 class="project-title">Description:</h4>
+                <p class="project-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p><span><a class="project-links" id="website-demo-link">Demo</a></span><span><a
+                            class="project-links">Code</a></span></p>
+                <!-- // You silly goose! You're already here! -->
+            </div>
+            <div class="project project2">
+                <h3>Movie IMDB Watchlist App</h3>
+                <img class="projects__img" src="img/project-image-02.jpg" />
+                <p><span class="toolbox-item">HTML</span>
+                    <span class="toolbox-item">CSS</span>
+                    <span class="toolbox-item">Javascript</span>
+                </p>
+                <h4 class="project-title">Description:</h4>
+                <p class="project-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p><span><a class="project-links">Demo</a></span><span><a class="project-links">Code</a></span></p>
+            </div>
+            <div class="project project3">
+                <h3>Tenzies Dice Game</h3>
+                <img class="projects__img" src="img/project-image-03.jpg" />
+                <p><span class="toolbox-item">HTML</span>
+                    <span class="toolbox-item">CSS</span>
+                    <span class="toolbox-item">Javascript</span>
+                </p>
+                <h4 class="project-title">Description:</h4>
+                <p class="project-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p><span><a class="project-links">Demo</a></span><span><a class="project-links">Code</a></span></p>
+            </div>
+            <div class="project project4">
+                <h3>Quizzical Game App</h3>
+                <img class="projects__img" src="img/project-image-04.jpg" />
+                <p><span class="toolbox-item">HTML</span>
+                    <span class="toolbox-item">CSS</span>
+                    <span class="toolbox-item">Javascript</span>
+                </p>
+                <h4 class="project-title">Description:</h4>
+                <p class="project-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p><span><a class="project-links">Demo</a></span><span><a class="project-links">Code</a></span></p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Me -->
+    <section class="contact-me" id="contact-me">
+        <div class="contact-header-area">
+
+            <h2 class="contact-me-header">
+                <div class="circle-div">
+                    <svg class="circle-svg" viewBox="0 0 80 80" width="100" height="100">
+                        <circle class="contact-circle" cx="40" cy="40" r="38" />
+                    </svg>
+                </div>Contact Me
+            </h2>
+        </div>
+        <p>
+            Wow! You've come all this way! What a fantastic time to have a chat!
+        </p>
+        <form>
+            <ul class="contact-form-list">
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_email" />
+                </li>
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+                <li>
+                    <button class="submit-btn" type="submit">
+                        Deploy Carrier Pigeon
+                    </button>
+                </li>
+            </ul>
+        </form>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://codepen.io" target="_blank">
+                    <i class="fab fa-codepen"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/connor-fadden-56678919a/"
+                    target="_blank">
+                    <i class="fab fa-dribbble"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/WombatAssassin" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
